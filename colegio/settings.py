@@ -124,24 +124,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-ADMINS = (
-    ('alvaro', 'alvaro@uvg.edu.gt'),
-)
-MANAGERS = ADMINS
-
-AUTH_USER_MODEL = 'mongo_auth.MongoUser'
+# AUTH_USER_MODEL = 'mongo_auth.MongoUser'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
 
-AUTHENTICATION_BACKENDS = (
-    'mongoengine.django.auth.MongoEngineBackend',
-)
+# AUTHENTICATION_BACKENDS = (
+#     'mongoengine.django.auth.MongoEngineBackend',
+# )
 
-SESSION_ENGINE = 'mongoengine.django.sessions'
+# SESSION_ENGINE = 'mongoengine.django.sessions'
 
-MONGO_DATABASE_NAME = 'BigData'
+# MONGO_DATABASE_NAME = 'BigData'
 
-from mongoengine import connect
-connect(MONGO_DATABASE_NAME)
+# from mongoengine import connect
+# connect(MONGO_DATABASE_NAME)
