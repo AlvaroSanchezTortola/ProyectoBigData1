@@ -1,0 +1,16 @@
+<ul>
+    {% for departamento in departamentos %}
+    <li>
+    	{{ departamento.nombre }}  {{ departamento.director }} {{ departamento.descripcion }} {{ departamento.profesores }} 
+    	{% for profesor in departamento.profesores %}
+    	<li>
+    		{{ profesor.nombre }}  {{ profesor.direccion }} 
+    	</li>
+    	{% endfor %}
+    	<a href="">Editar</a>
+    	<a href="">Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'colegiodb:nuevo_departamento' %}">Nuevo</a>

@@ -1,0 +1,16 @@
+<ul>
+    {% for profesor in profesores %}
+    <li>
+    	{{ profesor.nombre }}  {{ profesor.direccion }} {{ profesor.telefono }} {{ profesor.cursos }}
+    	{% for curso in profesor.cursos %}
+    	<li>
+    		{{ curso.nombre }}  {{ curso.nivel }} {{ curso.descripcion}} 
+    	</li>
+    	{% endfor %}
+    	<a href="">Editar</a>
+    	<a href="">Eliminar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'colegiodb:nuevo_profesor' %}">Nuevo</a>

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mongoengine.django.mongo_auth',
     'colegiobd',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -83,10 +82,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django_mongodb_engine',
         'NAME': 'BigData',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
     }
 }
 

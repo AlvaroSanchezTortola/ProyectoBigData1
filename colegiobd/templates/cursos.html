@@ -1,0 +1,9 @@
+<ul>
+    {% for curso in cursos %}
+    <li>
+    	{{ curso.nombre }}  {{ curso.nivel }} {{ curso.descripcion }} 
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'colegiodb:nuevo_curso' %}">Nuevo</a>
